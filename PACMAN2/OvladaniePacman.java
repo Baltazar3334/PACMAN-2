@@ -18,27 +18,27 @@ public class OvladaniePacman {
     }
     
     public void posunVpravo() {
-        this.pacman.posunVpravo();
+        this.pacman.pohybP();
     }
     
     public void posunVlavo() {
-        this.pacman.posunVlavo();
+        this.pacman.pohybL();
     }
     
     public void posunHore(){
-        this.pacman.posunHore();
+        this.pacman.pohybH();
     }
     
     public void posunDole(){
-        this.pacman.posunDole();
+        this.pacman.pohybD();
     }
     
     public void start(){
-        this.manazer.spravujObjekt(this.pacman);
+        this.manazer.spravujObjekt(this);
     }
     
     public void stop() {
-        this.manazer.prestanSpravovatObjekt(this.pacman);
+        this.manazer.prestanSpravovatObjekt(this);
     }
     
 }

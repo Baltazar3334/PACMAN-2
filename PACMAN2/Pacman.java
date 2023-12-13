@@ -1,39 +1,39 @@
-
-/**
- * Write a description of class Pacman here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-import fri.shapesge.Kruh;
+import fri.shapesge.Obrazok;
 public class Pacman {
-    /**
-     * Constructor for objects of class Pacman
-     */
-    private Kruh pacman;
+    private Obrazok pacman;
     private int x;
     private int y;
+    private boolean pohyb;
     public Pacman() {
-        this.pacman = new Kruh();
-        this.pacman.zmenPriemer(30);
+        this.pacman = new Obrazok("pic/pacman.png");
         this.pacman.zobraz();
         this.x = 0;
         this.y = 0;
+        this.pohyb = false;
     }
     
-    public void posunHore() {
-        this.pacman.posunZvisle(y - 5);
+    public int getX() {
+        return this.x;
     }
     
-    public void posunDole() {
-        this.pacman.posunZvisle(y + 5);
+    public int getY() {
+        return this.y;
     }
     
-    public void posunVlavo() {
-        this.pacman.posunVodorovne(x - 5);
+    public void pohybH() {
+        this.pacman.posunZvisle(this.y - 5);
     }
     
-    public void posunVpravo() {
-        this.pacman.posunVodorovne(x + 5);
+    public void pohybD() {
+        this.pacman.posunZvisle(this.y + 5);
     }
+    
+    public void pohybP() {
+        this.pacman.posunVodorovne(this.x + 5);
+    }
+    
+    public void pohybL() {
+        this.pacman.posunVodorovne(this.x - 5);
+    }
+    
 }
