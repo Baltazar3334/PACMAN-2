@@ -8,9 +8,11 @@
 public class Hra {
     private OvladaniePacman pacman;
     private Mapa mapa;
+    private Duch duch;
     public Hra() {
         this.pacman = new OvladaniePacman();
         this.mapa = new Mapa();
+        this.duch = new Duch();
     }
     
     public void spustiHru() {
@@ -19,5 +21,9 @@ public class Hra {
     
     public void skonciHru() {
         this.pacman.stop();
+    }
+    public void spawnDuchov(){
+        this.Duch();
+        
     }
 }
