@@ -1,4 +1,3 @@
-
 import fri.shapesge.Obrazok;
 public class Mapa {
     
