@@ -1,3 +1,4 @@
+
 import fri.shapesge.Obrazok;
 public class Pacman {
     private Obrazok pacman;
@@ -36,4 +37,6 @@ public class Pacman {
         this.pacman.posunVodorovne(this.x - 5);
     }
     
+
+
 }
