@@ -1,18 +1,11 @@
 
-/**
- * Write a description of class Mapa here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-import fri.shapesge.Obdlznik;
+import fri.shapesge.Obrazok;
 public class Mapa {
-    /**
-     * Constructor for objects of class Mapa
-     */
-    private Obdlznik obdlznik;
+    
+    private Obrazok mapa;
     public Mapa() {
-        this.obdlznik = new Obdlznik();
-        this.obdlznik.zobraz();
+        this.mapa = new Obrazok("pic/mapa.png");
+        this.mapa.zmenPolohu(15, 5);
+        this.mapa.zobraz();
     }
 }
