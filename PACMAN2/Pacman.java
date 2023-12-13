@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fri.shapesge.Obrazok;
 public class Pacman {
     private Obrazok pacman;
@@ -36,17 +35,4 @@ public class Pacman {
     public void pohybL() {
         this.pacman.posunVodorovne(this.x - 5);
     }
-    
-=======
-public class Pacman {
-    private int sirka;
-    private int vyska;
-    private boolean stav;
-    private int x;
-    private int y;
-    private int smer;
-    public Pacman() {
-        
-    }
->>>>>>> 2142b3433571fe50da21daf5e77fff9a81ba7fd6
 }
