@@ -27,14 +27,31 @@ public class Pacman {
     public void pohyb(){
         while(pohyb == true){
             switch(pohybSmer){
-                case "hore": this.pacman.posunZvisle(this.y - 5);
+                case "hore": 
+                this.pohybH();
+                break;
+                
+                case "dole":
+                this.pohybD();
+                break;
+                
+                case "pravo":
+                this.pohybP();
+                break;
+                
+                case "lavo":
+                this.pohybL();
+                break;
+                
+                default:
+                this.pohyb = false;
+                break;
             }
         }
     }
     
     public void pohybH() {
         this.pacman.posunZvisle(this.y - 5);
-        this.pohybSmer = "hore";
         this.pohyb = true;
         this.pohyb();
     }
