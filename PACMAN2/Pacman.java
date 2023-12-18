@@ -29,48 +29,52 @@ public class Pacman {
             switch(pohybSmer){
                 case "hore": 
                 this.pohybH();
+                
                 break;
                 
                 case "dole":
                 this.pohybD();
+                
                 break;
                 
                 case "pravo":
                 this.pohybP();
+                
                 break;
                 
                 case "lavo":
                 this.pohybL();
-                break;
                 
-                default:
-                this.pohyb = false;
                 break;
             }
-        }
+       }
     }
     
     public void pohybH() {
         this.pacman.posunZvisle(this.y - 5);
         this.pohyb = true;
+        this.pohybSmer = "hore";
         this.pohyb();
     }
     
     public void pohybD() {
         this.pacman.posunZvisle(this.y + 5);
         this.pohyb = true;
+        this.pohybSmer = "dole";
         this.pohyb();
     }
     
     public void pohybP() {
         this.pacman.posunVodorovne(this.x + 5);
         this.pohyb = true;
+        this.pohybSmer = "pravo";
         this.pohyb();
     }
     
     public void pohybL() {
         this.pacman.posunVodorovne(this.x - 5);
         this.pohyb = true;
+        this.pohybSmer = "lavo";
         this.pohyb();
     }
     
