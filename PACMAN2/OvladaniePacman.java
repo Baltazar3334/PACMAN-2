@@ -12,9 +12,13 @@ public class OvladaniePacman {
      */
     private Manazer manazer;
     private Pacman pacman;
-    public OvladaniePacman() {
-        this.pacman = new Pacman();
+    private Pole[][] mapa;
+    private int velkost;
+    public OvladaniePacman(Pole[][] mapa, int velkost) {
+        this.pacman = new Pacman(mapa, velkost);
         this.manazer = new Manazer();
+        this.mapa = mapa;
+        this.velkost = velkost;
     }
     
     public void posunVpravo() {
@@ -25,20 +29,22 @@ public class OvladaniePacman {
         this.pacman.pohybL();
     }
     
-    public void posunHore() {
+    public void posunHore(){
         this.pacman.pohybH();
     }
     
-    public void posunDole() {
+    public void posunDole(){
         this.pacman.pohybD();
     }
     
-    public void start() {
+    public void start(){
         this.manazer.spravujObjekt(this);
     }
     
     public void stop() {
         this.manazer.prestanSpravovatObjekt(this);
     }
-    
+    public void spawnujPacmana(int x, int y) {
+        pacman.startovnaPozicia(x, y);
+    }
 }

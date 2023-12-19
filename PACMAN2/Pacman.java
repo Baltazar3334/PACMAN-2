@@ -5,41 +5,56 @@ public class Pacman {
     private Obrazok pacman;
     private int x;
     private int y;
-    public Pacman() {
+    private Pole[][] mapa;
+    private int velkost;
+    public Pacman(Pole[][] mapa, int velkost) {
         this.pacman = new Obrazok("pic/pacman.png");
-        this.pacman.posunVodorovne(-100);
-        this.pacman.posunZvisle(-100);
-        this.pacman.posunVodorovne(241);
-        this.pacman.posunZvisle(110);
         this.pacman.zobraz();
         this.x = 0;
         this.y = 0;
+        this.mapa = mapa;
+        this.velkost =velkost;
     }
-    
-    public int getX() {
-        return this.x;
+   
+    public void startovnaPozicia(int vstupX, int vstupY) {
+        this.x = vstupX;
+        this.y = vstupY;
+        this.pacman.posunVodorovne((vstupX -2)* velkost);
+        this.pacman.posunZvisle((vstupY -2) * velkost);
     }
-    
-    public int getY() {
-        return this.y;
-    }
-    
     public void pohybH() {
-        this.pacman.posunZvisle(this.y - 20);
+        if (jeMozny(x, y - 1)) {
+            this.pacman.posunZvisle(-velkost); 
+            this.y -= 1;
+        }
     }
     
     public void pohybD() {
-        this.pacman.posunZvisle(this.y + 20);
+        if (jeMozny(x, y + 1)) {
+            this.pacman.posunZvisle(velkost); 
+            this.y += 1;
+        }
     }
     
     public void pohybP() {
-        this.pacman.posunVodorovne(this.x + 20);
+        if (jeMozny(x + 1, y)) {
+            this.pacman.posunVodorovne(velkost); 
+            this.x += 1;
+        }
     }
     
     public void pohybL() {
-        this.pacman.posunVodorovne(this.x - 20);
+        if (jeMozny(x - 1, y)) {
+            this.pacman.posunVodorovne(-velkost); 
+            this.x -= 1;
+        }
     }
-    
+        private boolean jeMozny(int newX, int newY) {
+        if (newX >= 0 && newX < mapa.length && newY >= 0 && newY < mapa[0].length) {
+            return mapa[newX][newY].getCisloPola() != 1;
+        }
+        return false;
+    }
 
 
 }
