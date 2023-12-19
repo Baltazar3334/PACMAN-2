@@ -18,7 +18,7 @@ public class Pole {
         this.stvorec.posunVodorovne(x * velkost);
         this.stvorec.posunZvisle(y * velkost);
         this.stvorec.zobraz();
-        if(cisloPola == 0){
+        if (cisloPola == 0) {
             this.piskot.zmenPriemer(5);
             this.piskot.zmenFarbu("yellow");
             this.piskot.posunVodorovne(45 + x * velkost);
@@ -28,6 +28,6 @@ public class Pole {
     }
     
     public int getCisloPola() {
-        return cisloPola;
+        return this.cisloPola;
     }
 }
