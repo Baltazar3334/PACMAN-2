@@ -7,6 +7,10 @@ public class Pacman {
     private int y;
     public Pacman() {
         this.pacman = new Obrazok("pic/pacman.png");
+        this.pacman.posunVodorovne(-100);
+        this.pacman.posunZvisle(-100);
+        this.pacman.posunVodorovne(241);
+        this.pacman.posunZvisle(110);
         this.pacman.zobraz();
         this.x = 0;
         this.y = 0;
