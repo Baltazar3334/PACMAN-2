@@ -10,6 +10,10 @@ public class Pacman {
     public Pacman(Pole[][] mapa, int velkost) {
         this.pacman = new Obrazok("pic/pacman.png");
         this.pacman.zobraz();
+        this.pacman.posunVodorovne(-100);
+        this.pacman.posunVodorovne(100);
+        this.pacman.posunZvisle(-100);
+        this.pacman.posunZvisle(90);
         this.x = 0;
         this.y = 0;
         this.mapa = mapa;
