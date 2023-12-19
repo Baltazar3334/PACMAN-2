@@ -21,19 +21,19 @@ public class Pacman {
     }
     
     public void pohybH() {
-        this.pacman.posunZvisle(this.y - 5);
+        this.pacman.posunZvisle(this.y - 20);
     }
     
     public void pohybD() {
-        this.pacman.posunZvisle(this.y + 5);
+        this.pacman.posunZvisle(this.y + 20);
     }
     
     public void pohybP() {
-        this.pacman.posunVodorovne(this.x + 5);
+        this.pacman.posunVodorovne(this.x + 20);
     }
     
     public void pohybL() {
-        this.pacman.posunVodorovne(this.x - 5);
+        this.pacman.posunVodorovne(this.x - 20);
     }
     
 
