@@ -25,15 +25,15 @@ public class OvladaniePacman {
         this.pacman.pohybL();
     }
     
-    public void posunHore(){
+    public void posunHore() {
         this.pacman.pohybH();
     }
     
-    public void posunDole(){
+    public void posunDole() {
         this.pacman.pohybD();
     }
     
-    public void start(){
+    public void start() {
         this.manazer.spravujObjekt(this);
     }
     

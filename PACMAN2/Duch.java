@@ -6,7 +6,7 @@ public class Duch {
     private int y;
     private boolean pohyb;
     private String pohybSmer;
-    public Duch(String obrazok,int x,int y) {
+    public Duch(String obrazok, int x, int y) {
         this.duch = new Obrazok(obrazok);
         this.duch.zobraz();
         this.duch.posunVodorovne(-100);

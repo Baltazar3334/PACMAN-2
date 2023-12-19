@@ -11,8 +11,8 @@ public class Mapa {
     public Mapa(int velkost) throws IOException {
         this.vyska = 11;
         this.sirka = 19;
-        this.mapa = new Pole[sirka][vyska];
-        nacitajMapu("mapa.txt", velkost);
+        this.mapa = new Pole[this.sirka][this.vyska];
+        this.nacitajMapu("mapa.txt", velkost);
     }
     
     private void nacitajMapu(String nazovSuboru, int velkost) throws IOException {
@@ -21,7 +21,7 @@ public class Mapa {
         
         for (int y = 0; y < vyska; y++) {
             for (int x = 0; x < sirka; x++) {
-                if (scanner.hasNextInt()){
+                if (scanner.hasNextInt()) {
                     int cisloPola = scanner.nextInt();
                     Stvorec stvorec = new Stvorec();
                     Kruh piskot = new Kruh();
