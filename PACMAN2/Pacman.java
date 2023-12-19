@@ -20,8 +20,6 @@ public class Pacman {
         return this.y;
     }
     
-    
-    
     public void pohybH() {
         this.pacman.posunZvisle(this.y - 5);
     }

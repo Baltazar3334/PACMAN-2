@@ -19,4 +19,20 @@ public class Duch {
         this.pohyb = false;
         this.pohybSmer = "";
     }
+    
+    public void duchPohybH() {
+        this.duch.posunZvisle(this.y - 5);
+    }
+    
+    public void duchPohybD() {
+        this.duch.posunZvisle(this.y + 5);
+    }
+    
+    public void duchPohybP() {
+        this.duch.posunVodorovne(this.x + 5);
+    }
+    
+    public void duchPohybL() {
+        this.duch.posunVodorovne(this.x - 5);
+    }
 }
