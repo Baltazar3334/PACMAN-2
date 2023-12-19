@@ -5,19 +5,25 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.IOException;
 public class Hra {
     private OvladaniePacman pacman;
     private Mapa mapa;
-    public Hra() {
+    private OvladanieDuchovia ovladanieDuchovia;
+    public Hra()throws IOException {
+        this.mapa = new Mapa(20);
         this.pacman = new OvladaniePacman();
-        this.mapa = new Mapa();
+        this.ovladanieDuchovia = new OvladanieDuchovia();
     }
     
     public void spustiHru() {
         this.pacman.start();
+        this.ovladanieDuchovia.start();
     }
     
     public void skonciHru() {
         this.pacman.stop();
     }
+    
+    
 }
