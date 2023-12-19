@@ -9,6 +9,7 @@ public class Pacman {
         this.pacman = new Obrazok("pic/pacman.png");
         this.pacman.zobraz();
         this.x = 0;
+        this.y = 0;
     }
     
     public int getX() {
