@@ -5,6 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.IOException;
 public class Hra {
     private OvladaniePacman pacman;
     private Mapa mapa;
@@ -12,9 +13,9 @@ public class Hra {
     private Duch duch2;
     private Duch duch3;
     private Duch duch4;
-    public Hra() {
+    public Hra()throws IOException {
+        this.mapa = new Mapa(20);
         this.pacman = new OvladaniePacman();
-        this.mapa = new Mapa();
     }
     
     public void spustiHru() {

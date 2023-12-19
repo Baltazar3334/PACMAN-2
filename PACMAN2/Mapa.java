@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import fri.shapesge.Stvorec;
-
+import fri.shapesge.Kruh;
 public class Mapa {
     private Pole[][] mapa;
     private int vyska;
@@ -24,7 +24,8 @@ public class Mapa {
                 if (scanner.hasNextInt()){
                     int cisloPola = scanner.nextInt();
                     Stvorec stvorec = new Stvorec();
-                    Pole policko = new Pole(x, y, velkost, cisloPola, stvorec);
+                    Kruh piskot = new Kruh();
+                    Pole policko = new Pole(x, y, velkost, cisloPola, stvorec, piskot);
                     this.mapa[x][y] = policko;
                 }
             }
