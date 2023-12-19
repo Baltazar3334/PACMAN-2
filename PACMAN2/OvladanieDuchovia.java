@@ -31,9 +31,9 @@ public class OvladanieDuchovia {
     }
     
     public void start(){
-        this.duch1 = new Duch("pic/ghost_blue.png",20,10);
-        this.duch3 = new Duch("pic/ghost_pink.png",20,260);
-        this.duch2 = new Duch("pic/ghost_red.png",240,10);
-        this.duch4 = new Duch("pic/ghost_orange.png",240,260);
+        this.duch1 = new Duch("pic/ghost_blue.png",79,68);
+        this.duch3 = new Duch("pic/ghost_pink.png",79,228);
+        this.duch2 = new Duch("pic/ghost_red.png",399,68);
+        this.duch4 = new Duch("pic/ghost_orange.png",399,228);
     }
 }
